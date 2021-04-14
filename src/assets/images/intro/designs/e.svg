@@ -1,0 +1,9 @@
+<svg viewBox="0 0 41 57">
+    <polygon class="letter4" fill="#000000" fill-rule="nonzero" opacity="0.056594" points="40.9 46.45 40.9 56.8 0.85 56.8 0.85 0.1 40 0.1 40 10.45 11.65 10.45 11.65 22.6 37.75 22.6 37.75 32.95 11.65 32.95 11.65 46.45"></polygon>
+    <path d="M1,5.5 L40,5.5" stroke="#F22F2D" stroke-width="11" class="linea_e1_1"></path>
+    <path d="M40,28.5 L1,28.5" stroke="#F22F2D" stroke-width="11" class="linea_e1_2"></path>
+    <path d="M1,51.5 L40,51.5" stroke="#F22F2D" stroke-width="11" class="linea_e1_3"></path>
+    <path d="M1,5.5 L40,5.5" stroke="#F22F2D" stroke-width="11" class="linea4 linea_e1_1_1"></path>
+    <path d="M40,28.5 L1,28.5" stroke="#F22F2D" stroke-width="11" class="linea4 linea_e1_2_1"></path>
+    <path d="M1,51.5 L40,51.5" stroke="#F22F2D" stroke-width="11" class="linea4 linea_e1_3_1"></path>
+</svg>
