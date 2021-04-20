@@ -34,7 +34,7 @@ const Main = () => {
           <div
             className={styles.wrapper}
             onMouseOver={() => {
-              console.log("moveed");
+              console.log("moveeeed");
             }}
           >
             <div className={styles.menu}></div>
