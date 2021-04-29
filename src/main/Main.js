@@ -31,12 +31,7 @@ const Main = () => {
         </div>
         <Intro />
         <div className={styles.hamburger}>
-          <div
-            className={styles.wrapper}
-            onMouseOver={() => {
-              console.log("moveeeed");
-            }}
-          >
+          <div className={styles.wrapper}>
             <div className={styles.menu}></div>
             <div className={styles.menu}></div>
           </div>

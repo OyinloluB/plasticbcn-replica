@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  div {
+    text-align: center;
+
+    h1 {
+      font-size: 72px;
+    }
+  }
+}

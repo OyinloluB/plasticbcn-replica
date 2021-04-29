@@ -68,20 +68,22 @@
 
 .cursor {
   position: fixed;
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
-  background: #000000;
+  background: #ffffff;
   @include flex(column, center, center);
   z-index: 1000;
-  transition: 0.25s;
+  transition: 0.3s;
   transform-origin: center center;
   pointer-events: none;
-  mix-blend-mode: difference;
+  mix-blend-mode: exclusion;
 
   span {
-    color: #ffffff;
+    color: #000000;
     text-transform: uppercase;
-    font-size: 12px;
+    line-height: 80px;
+    font-size: 14px;
+    font-weight: 600;
   }
 }
