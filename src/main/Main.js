@@ -14,40 +14,30 @@ import contactIcon from "../assets/images/global/contact-icon.svg";
 const Main = () => {
   const cursor = useRef(null);
   const logoHover = useRef(null);
-  let options = {
-    distance: 100,
-  };
-  let width;
-  let height;
-  let diagonal;
-  let maxDistance;
 
   const handleCursor = (e) => {
     cursor.current.style.left = e.pageX + "px";
     cursor.current.style.top = e.pageY + "px";
   };
 
-  useEffect(() => {
-    width = logoHover.offsetWidth;
-    height = logoHover.offsetHeight;
-    diagonal = Math.sqrt(Math.pow(width, 2) + Math.pow(height, 2));
-    maxDistance = (diagonal + options.distance) / 2;
-    logoHover.style.transition = "0.6s cubic-bezier(0.075, 0.82, 0.165, 1)";
-  }, []);
+  const handleMagnet = (e) => {
+    let x = logoHover.current.offsetX;
+    let y = logoHover.current.offsetY;
+    let width = logoHover.current.offsetWidth;
+    let height = logoHover.current.offsetHeight;
+    let move = 30;
+    let xMove = (x / width) * (move * 2) - move;
+    let yMove = (y / height) * (move * 2) - move;
 
-  const handleMagnet = () => {
-    if (options.distance < maxDistance) {
-      let percent = 1 - options.distance / maxDistance;
-      logoHover.style.transform = `
-            translate3d(${Math.round(x * percent)}px, ${Math.round(
-        y * percent
-      )}px, 0) 
-            rotateY(${Math.round(x * percent)}deg) 
-            rotateX(${Math.round(y * percent)}deg)
-          `;
-    } else {
-      logoHover.style.transform = "";
-    }
+    logoHover.current.style.transform = `translate(${xMove}px, ${yMove}px)`;
+
+    console.log(x, y, width, height, xMove, yMove);
+
+    // if (e.type === "mouseleave") logoHover.current.style.transform = "";
+  };
+
+  const stopMagnet = (e) => {
+    logoHover.current.style.transform = "";
   };
 
   return (
@@ -59,6 +49,7 @@ const Main = () => {
             ref={logoHover}
             alt="plasticbcn-replica-logo"
             onMouseMove={handleMagnet}
+            onMouseLeave={stopMagnet}
           />
           <div>
             <img src={contactText} alt="plasticbcn-replica-contactText" />
