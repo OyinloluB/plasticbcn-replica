@@ -7,6 +7,17 @@
   cursor: none;
 }
 
+.navContent {
+  background-color: #000000;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: -100vh;
+  transition: all 0.2s ease-in-out;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
 .sidebar {
   @include flex(column, space-between, center);
   height: 100vh;

@@ -40,6 +40,7 @@ const Main = () => {
 
   return (
     <>
+      <div className={styles.navContent}></div>
       <div className={styles.container} onMouseMove={handleCursor}>
         <div className={styles.sidebar}>
           <div
