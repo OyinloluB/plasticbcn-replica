@@ -24,7 +24,6 @@ const Main = () => {
   const overlay = useRef(null);
 
   const handleCursor = (e) => {
-    console.log((cursor.current.style.left = e.pageX + "px"));
     cursor.current.style.left = e.pageX + "px";
     cursor.current.style.top = e.pageY + "px";
   };
@@ -45,16 +44,21 @@ const Main = () => {
     item.current.style.transform = "";
   };
 
+  // const closeHamburger = menuOpen ? styles.closeMenu : styles.wrapper;
+
   const openOverlay = () => {
     if (menuOpen === true) {
       overlay.current.style.height = "100%";
       menuWrapper.current.style.zIndex = "1";
+      menuWrapper.current.style.transition = "0.25s";
       topMenuLine.current.style.transform = "translateY(3.5px) rotate(45deg)";
       topMenuLine.current.style.background = "#ffffff";
+      topMenuLine.current.style.transition = "0.25s";
       bottomMenuLine.current.style.transform =
         "translateX(0) translateY(-3.5px) rotate(-45deg)";
       bottomMenuLine.current.style.background = "#ffffff";
       bottomMenuLine.current.style.width = "22px";
+      bottomMenuLine.current.style.transition = "0.25s";
     } else {
       overlay.current.style.height = "0%";
       menuWrapper.current.style.zIndex = "unset";
