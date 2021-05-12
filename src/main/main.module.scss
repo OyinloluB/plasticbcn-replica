@@ -10,19 +10,6 @@
   }
 }
 
-.navContent {
-  background-color: #000000;
-  height: 0%;
-  width: 100%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  overflow-y: hidden;
-  transition: 0.5s;
-  transition-delay: 0.5s;
-}
-
 .sidebar {
   @include flex(column, space-between, center);
   height: 100vh;
@@ -32,6 +19,7 @@
     @include flex(column, space-between, center);
     transition: transform 300ms linear;
     width: 100%;
+    z-index: 1;
 
     img {
       transition: transform 300ms linear;
