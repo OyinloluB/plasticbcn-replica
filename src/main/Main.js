@@ -111,7 +111,7 @@ const Main = () => {
             <div className={styles.menu} ref={bottomMenuLine}></div>
           </div>
           <div className={styles.cursor} ref={cursor}>
-            {menuOpen ? "" : <span>Scroll</span>}
+            {menuOpen ? "" : <span>Move</span>}
           </div>
         </div>
       </div>
